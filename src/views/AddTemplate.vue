@@ -193,7 +193,7 @@
         return;}
           console.log({data:this.templateData});
           this.loading = true;
-          let url = `${process.env.BACKEND_URL}/addtemplate`;
+          let url = `${process.env.VUE_APP_BACKEND_URL}/addtemplate`;
           const resp = await fetch(url, {
             method: 'POST',
             headers: {

@@ -126,7 +126,7 @@ export default {
     async getAllTemplates() {
       try {
         this.templateLoading = true;
-        let url = process.env.BACKEND_URL;
+        let url = process.env.VUE_APP_BACKEND_URL;
         let response = await fetch(`${url}/alltemplates`, {
           method: 'GET',
           headers: { 'content-type': 'application/json' }
@@ -153,7 +153,7 @@ export default {
       try {
         this.loading = true;
         let template_Id = item._id;
-        let url = `${process.env.BACKEND_URL}/deletetemplate?template_Id=${template_Id}`;
+        let url = `${process.env.VUE_APP_BACKEND_URL}/deletetemplate?template_Id=${template_Id}`;
         const response = await fetch(url, {
           method: 'DELETE',
           headers: {
@@ -196,7 +196,7 @@ export default {
           return;
         }else{
      
-      const url = `${process.env.BACKEND_URL}/updatetemplate?template_Id=${this.popupData._id}`;
+      const url = `${process.env.VUE_APP_BACKEND_URL}/updatetemplate?template_Id=${this.popupData._id}`;
       let data = {
         templateName:this.popupData.templateName,
         fieldData:this.popupData.fieldData,

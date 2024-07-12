@@ -132,7 +132,7 @@ export default {
         async getAllTemplates() {
             try {
                 this.loading = true;
-                let url = `${process.env.BACKEND_URL}/alltemplates`
+                let url = `${process.env.VUE_APP_BACKEND_URL}/alltemplates`
                 let response = await fetch(url, {
                     method: 'GET',
                     headers: { 'content-type': 'application/json' }
